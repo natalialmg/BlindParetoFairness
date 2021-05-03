@@ -208,13 +208,9 @@ def Compas_pandas(groups_list=['race_bin','sex'], utility='two_year_recid', norm
 
 dirdata_lawschool = '/data/MLTdata/law_school/dataset_processed/'
 
-def lawschool_pandas(groups_list=['race'], utility='pass_bar', norm_std=True, split = 1,seed=42,
-                     extended_features = False,n_splits = 5):
+def lawschool_pandas(groups_list=['fam_inc_m12m45','race_bin'], utility='pass_bar', norm_std=True, split = 1,seed=42,n_splits = 5):
 
-    if extended_features:
-        pd_data_o = pd.read_csv(os.path.join(dirdata_lawschool, 'dataset_extended_cat.csv'))
-    else:
-        pd_data_o = pd.read_csv(os.path.join(dirdata_lawschool, 'dataset_cat.csv'))
+    pd_data_o = pd.read_csv(os.path.join(dirdata_lawschool, 'dataset_cat.csv'))
 
     ## before processing remove all rows with nans in utility col
     if ('pass_bar' == utility) | ('pass_bar' in groups_list):
@@ -225,10 +221,7 @@ def lawschool_pandas(groups_list=['race'], utility='pass_bar', norm_std=True, sp
 
 
     # remove & extract categorical sensitive columns
-    if extended_features:
-        s_columns = ['race', 'race_bin', 'sex', 'zfygpa', 'pass_bar', 'sample', 'fam_inc_m12', 'fam_inc_m45', 'fam_inc_m12m45']
-    else:
-        s_columns = ['race', 'race_bin', 'sex', 'fam_inc', 'zfygpa', 'pass_bar', 'sample', 'parttime', 'fam_inc_m12', 'fam_inc_m45', 'fam_inc_m12m45']
+    s_columns = ['race', 'race_bin', 'sex', 'fam_inc', 'zfygpa', 'pass_bar', 'sample', 'parttime', 'fam_inc_m12', 'fam_inc_m45', 'fam_inc_m12m45']
 
     for group in groups_list:
         if 'fam_inc' in group:
@@ -241,28 +234,13 @@ def lawschool_pandas(groups_list=['race'], utility='pass_bar', norm_std=True, sp
             pd_data[col] = pd_data_o[col].values
 
     print(groups_list, s_data_dic.keys())
-    ### Group Tags
-    values, int2tag, tag2int = group_concatenation(s_data_dic, groups_list,
-                                                   tag2int={}, int2tag=[])
-    pd_data['groups'] = values
-    pd_data['groups_str'] = np.array(int2tag)[values, -1]
 
     ## set utility variables and reincorporate samples index
     pd_data['utility'] = s_data_dic[utility].values
     pd_data['sample_index'] = s_data_dic['sample'].values
 
-    ### Groups with utility  (groups x utility, optional)
-    groups2_list = groups_list.copy()
-    groups2_list.append(utility)
 
-    values_g2, int2tag_g2, tag2int_g2 = group_concatenation(s_data_dic, groups2_list,
-                                                            tag2int={}, int2tag=[])
-    pd_data['groups_wutil'] = values_g2
-    pd_data['groups_wutil_str'] = np.array(int2tag_g2)[values_g2, -1]
-
-    ### Train - Test split ###
-    # strat_list = ['race', 'sex', 'pass_bar']
-    # strat_list = ['race_bin', 'pass_bar']
+    ### Group Tags
 
     strat_list = []
     for group in groups_list:
@@ -272,8 +250,7 @@ def lawschool_pandas(groups_list=['race'], utility='pass_bar', norm_std=True, sp
             strat_list.append(group)
     if 'pass_bar' == utility :
         strat_list.append('pass_bar')
-    # if 'fam_inc' in groups_list:
-        # strat_list.append('fam_inc')
+
     values_strat, int2tag_strat, tag2int_strat = group_concatenation(s_data_dic, strat_list,
                                                                      tag2int={}, int2tag=[])
     pd_data['strat'] = np.array(int2tag_strat)[values_strat, -1]
@@ -324,7 +301,7 @@ def lawschool_pandas(groups_list=['race'], utility='pass_bar', norm_std=True, sp
 
     check = all(item in pd_train['sample_index'].values for item in pd_test['sample_index'].values)
     print('------- Law school admission Dataset processing ---------- ')
-    print('utility : ', utility, '; groups : ', groups_list, '; groups_wutil : ', groups2_list, '; strat : ',strat_list,'; standarization : ',
+    print('utility : ', utility, '; stratification_tags : ', strat_list, '; standarization : ',
           norm_std, '; len(cov_tags) : ', len(cov_tags))
     print('cov_tags : ', cov_tags)
     print('ntrain : ', len(pd_train), ' ; ntest : ', len(pd_test))

@@ -117,6 +117,7 @@ def DRO_trainer(train_dataloader, val_dataloader,
         output_train = DRO_epoch_training(dataloader=train_dataloader, classifier_network=classifier_network,
                                       eta=config.eta, criterions=criterion, DEVICE=config.DEVICE,
                                       optimizer=optimizer, train_type='train',metrics_dic=metrics_dic)
+
         output_val = DRO_epoch_training(dataloader=val_dataloader, classifier_network=classifier_network,
                                       eta=config.eta, criterions=criterion, DEVICE=config.DEVICE,
                                       optimizer=optimizer, train_type='val',metrics_dic=metrics_dic)
