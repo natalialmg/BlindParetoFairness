@@ -42,9 +42,28 @@ class metrics(nn.Module):
 
     def forward(self, inputs, targets):
 
+        if self.type_loss == 'R2':
+            inputs = to_np(inputs)  # last dim are the classes
+            targets = to_np(targets)
+            ret = np.sum((inputs-targets)**2) / np.sum((inputs - np.mean(targets))**2)
+
         if self.type_loss == 'acc':
             inputs = torch.nn.Softmax(dim=-1)(inputs)  # last dim are the classes
+            input_argmax = np.argmax(to_np(inputs),-1)
+            ret = to_np(targets)[np.arange(input_argmax.shape[0]),input_argmax]
+
+        if self.type_loss == 'err':
+            inputs = torch.nn.Softmax(dim=-1)(inputs)  # last dim are the classes
+            input_argmax = np.argmax(to_np(inputs),-1)
+            ret = 1-to_np(targets)[np.arange(input_argmax.shape[0]),input_argmax]
+
+        if self.type_loss == 'softacc':
+            inputs = torch.nn.Softmax(dim=-1)(inputs)  # last dim are the classes
             ret = np.sum(to_np(inputs)*to_np(targets),-1)
+
+        if self.type_loss == 'softerr':
+            inputs = torch.nn.Softmax(dim=-1)(inputs)  # last dim are the classes
+            ret = 1-np.sum(to_np(inputs)*to_np(targets),-1)
 
         if self.type_loss == 'auc':
             inputs = torch.nn.Softmax(dim=-1)(inputs)  # last dim are the classes

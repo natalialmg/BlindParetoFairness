@@ -1,7 +1,6 @@
 
 import numpy as np
 import pandas as pd
-from sklearn.model_selection import KFold
 import json,os
 
 def extract_sensitive_columns(s_columns,pd_table,s_inc_col = False):

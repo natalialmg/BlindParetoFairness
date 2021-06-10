@@ -142,6 +142,7 @@ def get_best_model(pd_summary, model_tag='rho_model', dataset_choice=['train', '
 
         for metric in pd_summary.metric.unique():
             for rho_eval in pd_summary.rho_eval.unique():
+                # print(rho_eval)
                 pd_aux = pd_summary.loc[filter_rows & (pd_summary.metric == metric) & (pd_summary.rho_eval == rho_eval)]
 
                 worst = np.array(np.round(pd_aux.groupby(model_tag)['worst'].mean(), precision))
@@ -163,6 +164,7 @@ def get_best_model(pd_summary, model_tag='rho_model', dataset_choice=['train', '
     for split in matching_values.split.unique():
         for metric in matching_values.metric.unique():
             for rho_eval in matching_values.rho_eval.unique():
+
                 matching_values_aux = matching_values.loc[
                     (matching_values.split == split) & (matching_values.metric == metric) &
                     (matching_values.rho_eval == rho_eval)]
@@ -171,7 +173,7 @@ def get_best_model(pd_summary, model_tag='rho_model', dataset_choice=['train', '
                 pd_out_aux = pd_summary.loc[(pd_summary.split == split) & (pd_summary.metric == metric) &
                                             (pd_summary.rho_eval == rho_eval) & (
                                             pd_summary[model_tag] == best_model_tag)]
-
+                # print(len(pd_out_aux),rho_eval)
                 if pd_out is None:
                     pd_out = pd_out_aux.copy()
                 else:

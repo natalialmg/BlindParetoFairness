@@ -117,6 +117,7 @@ import time, os
 from pynvml import *
 from subprocess import Popen
 import numpy as np
+import pickle, shlex
 nvmlInit()
 
 def run_command(cmd, minmem=2,use_env_variable=True, admissible_gpus=[1],sleep=60):
@@ -125,25 +126,27 @@ def run_command(cmd, minmem=2,use_env_variable=True, admissible_gpus=[1],sleep=6
 
     while not sufficient_memory:
         time.sleep(sleep)
-        # Check free memory
-        info = nvmlDeviceGetMemoryInfo(nvmlDeviceGetHandleByIndex(0))
-        free_0 = info.free/ 1024 / 1024 / 1024 if 0 in admissible_gpus else 0
-        info = nvmlDeviceGetMemoryInfo(nvmlDeviceGetHandleByIndex(1))
-        free_1 = info.free / 1024 / 1024 / 1024 if 1 in admissible_gpus else 0
+        frees=[]
+        for gpu in admissible_gpus:
+            info = nvmlDeviceGetMemoryInfo(nvmlDeviceGetHandleByIndex(gpu))
+            free = info.free / 1024 / 1024 / 1024
+            frees.append(free)
+        frees = np.array(frees)
         if not use_env_variable: #safe mode
-            sufficient_memory = np.minimum(free_0,free_1) >=minmem  # 4.5 Gb
+            sufficient_memory = np.min(frees) >=minmem  # 4.5 Gb
         else:
-            sufficient_memory = np.maximum(free_0, free_1) >= minmem  # 4.5 Gb
-        gpu_idx = np.argmax([free_0,free_1])
-        # if not sufficient_memory:
-        #     time.sleep(60)
+            sufficient_memory = np.max(frees) >= minmem  # 4.5 Gb
+        gpu_idx = admissible_gpus[np.argmax(frees)]
+
     if use_env_variable:
         # os.system('CUDA_VISIBLE_DEVICES="{}" '.format(gpu_idx) +cmd)
         proc = Popen(['CUDA_VISIBLE_DEVICES="{}" '.format(gpu_idx) + cmd.format(0)], shell=True,
                      stdin=None, stdout=None, stderr=None, close_fds=True)
         print('CUDA_VISIBLE_DEVICES="{}" '.format(gpu_idx) + cmd.format(0))
     else:
-        os.system(cmd.format(gpu_idx))
+        proc = Popen(shlex.split(cmd.format(gpu_idx)), shell=False,
+                     stdin=None, stdout=None, stderr=None, close_fds=True)
+        print( cmd.format(gpu_idx))
 
 
 

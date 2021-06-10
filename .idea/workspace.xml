@@ -21,12 +21,25 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="bash_BPF.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="bash_BPF.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/BPF/bash_BPF.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1020">
-              <caret line="68" column="73" selection-start-line="68" selection-start-column="73" selection-end-line="68" selection-end-column="73" />
+            <state relative-caret-position="285">
+              <caret line="19" column="12" selection-start-line="19" selection-start-column="12" selection-end-line="19" selection-end-column="12" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main_BPF_tabular.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/BPF/main_BPF_tabular.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="470">
+              <caret line="281" column="43" selection-start-line="281" selection-start-column="43" selection-end-line="281" selection-end-column="43" />
+              <folding>
+                <element signature="e#0#10#0" expanded="true" />
+                <element signature="e#14841#14930#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -34,68 +47,8 @@
       <file leaf-file-name="bash_DRO.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/DRO/bash_DRO.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="465">
-              <caret line="31" column="22" selection-start-line="31" selection-start-column="22" selection-end-line="31" selection-end-column="22" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DRO_trainers.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/DRO/DRO_trainers.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="945">
-              <caret line="131" column="0" selection-start-line="131" selection-start-column="0" selection-end-line="131" selection-end-column="0" />
-              <folding>
-                <element signature="e#360#2507#0" expanded="false" />
-                <element signature="e#6139#8872#0" expanded="false" />
-                <element signature="e#6189#7819#0" expanded="false" />
-                <element signature="e#7888#8296#0" expanded="false" />
-                <element signature="e#8346#8872#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="utils.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/general/utils.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="525">
-              <caret line="123" column="13" selection-start-line="123" selection-start-column="13" selection-end-line="123" selection-end-column="13" />
-              <folding>
-                <element signature="e#0#18#0" expanded="true" />
-                <element signature="e#205#283#0" expanded="false" />
-                <element signature="e#359#532#0" expanded="false" />
-                <element signature="e#560#614#0" expanded="false" />
-                <element signature="e#656#725#0" expanded="false" />
-                <element signature="e#745#776#0" expanded="false" />
-                <element signature="e#840#2308#0" expanded="false" />
-                <element signature="e#2346#2968#0" expanded="false" />
-                <element signature="e#2996#3443#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="networks.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/general/networks.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
-              <folding>
-                <element signature="e#1091#2049#0" expanded="false" />
-                <element signature="e#1206#1827#0" expanded="false" />
-                <element signature="e#1863#2049#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main_DRO_tabular.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/DRO/main_DRO_tabular.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="720">
-              <caret line="48" column="0" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="30" />
+            <state relative-caret-position="255">
+              <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -104,64 +57,40 @@
       <file leaf-file-name="evaluation.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/general/evaluation.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="134" column="99" selection-start-line="134" selection-start-column="99" selection-end-line="134" selection-end-column="99" />
+            <state relative-caret-position="660">
+              <caret line="160" column="0" selection-start-line="160" selection-start-column="0" selection-end-line="160" selection-end-column="0" />
               <folding>
-                <element signature="e#1#19#0" expanded="true" />
                 <element signature="e#210#1815#0" expanded="false" />
                 <element signature="e#1930#2599#0" expanded="false" />
                 <element signature="e#2661#3024#0" expanded="false" />
                 <element signature="e#3084#3402#0" expanded="false" />
                 <element signature="e#3461#3908#0" expanded="false" />
                 <element signature="e#3962#4361#0" expanded="false" />
-                <element signature="e#4489#6852#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BPF_trainers.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/BPF/BPF_trainers.py">
+      <file leaf-file-name="datasets.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/dataloaders/datasets.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="297" column="76" selection-start-line="297" selection-start-column="76" selection-end-line="297" selection-end-column="76" />
+            <state relative-caret-position="420">
+              <caret line="287" column="104" selection-start-line="287" selection-start-column="104" selection-end-line="287" selection-end-column="104" />
               <folding>
-                <element signature="e#0#18#0" expanded="true" />
-                <element signature="e#501#15276#0" expanded="false" />
-                <element signature="e#501#618#0" expanded="false" />
-                <element signature="e#10277#11729#0" expanded="false" />
-                <element signature="e#15465#18688#0" expanded="false" />
+                <element signature="e#466#3874#0" expanded="false" />
+                <element signature="e#4080#7699#0" expanded="false" />
+                <element signature="e#7948#12217#0" expanded="false" />
+                <element signature="e#12429#15221#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BPF_classes.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/BPF/BPF_classes.py">
+      <file leaf-file-name="main_DRO_tabular.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/DRO/main_DRO_tabular.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="750">
-              <caret line="264" column="8" selection-start-line="264" selection-start-column="8" selection-end-line="265" selection-end-column="24" />
-              <folding>
-                <element signature="e#0#15#0" expanded="true" />
-                <element signature="e#146#8444#0" expanded="false" />
-                <element signature="e#184#1085#0" expanded="false" />
-                <element signature="e#1119#1807#0" expanded="false" />
-                <element signature="e#1855#2194#0" expanded="false" />
-                <element signature="e#2398#7935#0" expanded="false" />
-                <element signature="e#7984#8444#0" expanded="false" />
-                <element signature="e#10818#11226#0" expanded="false" />
-                <element signature="e#11276#11802#0" expanded="false" />
-                <element signature="e#11844#13801#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main_BPF_tabular.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/BPF/main_BPF_tabular.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="27" column="7" selection-start-line="27" selection-start-column="7" selection-end-line="27" selection-end-column="7" />
+            <state relative-caret-position="257">
+              <caret line="311" column="0" selection-start-line="327" selection-start-column="8" selection-end-line="327" selection-end-column="46" />
               <folding />
             </state>
           </provider>
@@ -183,26 +112,26 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/DRO/DRO_trainer.py" />
-        <option value="$PROJECT_DIR$/dataloaders/data_preprocessing.py" />
         <option value="$PROJECT_DIR$/dataloaders/dataset_loaders.py" />
         <option value="$PROJECT_DIR$/networks/network_heads.py" />
         <option value="$PROJECT_DIR$/networks/network_bodies.py" />
         <option value="$PROJECT_DIR$/networks/network_utils.py" />
-        <option value="$PROJECT_DIR$/general/networks.py" />
+        <option value="$PROJECT_DIR$/DRO/bashgen_DRO.py" />
+        <option value="$PROJECT_DIR$/general/postprocessing.py" />
+        <option value="$PROJECT_DIR$/dataloaders/data_preprocessing.py" />
         <option value="$PROJECT_DIR$/general/losses.py" />
         <option value="$PROJECT_DIR$/dataloaders/dataloaders.py" />
-        <option value="$PROJECT_DIR$/DRO/main_DRO_tabular.py" />
-        <option value="$PROJECT_DIR$/DRO/bashgen_DRO.py" />
-        <option value="$PROJECT_DIR$/general/utils.py" />
         <option value="$PROJECT_DIR$/BPF/BPF_trainers.py" />
-        <option value="$PROJECT_DIR$/BPF/main_BPF_tabular.py" />
+        <option value="$PROJECT_DIR$/general/utils.py" />
         <option value="$PROJECT_DIR$/BPF/BPF_classes.py" />
+        <option value="$PROJECT_DIR$/general/networks.py" />
         <option value="$PROJECT_DIR$/general/evaluation.py" />
-        <option value="$PROJECT_DIR$/dataloaders/datasets.py" />
-        <option value="$PROJECT_DIR$/DRO/bash_DRO.py" />
-        <option value="$PROJECT_DIR$/general/postprocessing.py" />
         <option value="$PROJECT_DIR$/DRO/DRO_trainers.py" />
+        <option value="$PROJECT_DIR$/DRO/main_DRO_tabular.py" />
+        <option value="$PROJECT_DIR$/DRO/bash_DRO.py" />
+        <option value="$PROJECT_DIR$/BPF/main_BPF_tabular.py" />
         <option value="$PROJECT_DIR$/BPF/bash_BPF.py" />
+        <option value="$PROJECT_DIR$/dataloaders/datasets.py" />
       </list>
     </option>
   </component>
@@ -213,10 +142,10 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1481" />
-    <option name="y" value="85" />
-    <option name="width" value="1415" />
-    <option name="height" value="945" />
+    <option name="x" value="1593" />
+    <option name="y" value="41" />
+    <option name="width" value="1464" />
+    <option name="height" value="1002" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -244,7 +173,6 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -321,6 +249,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -553,14 +482,15 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1481" y="85" width="1415" height="945" extended-state="0" />
-    <editor active="false" />
+    <frame x="1593" y="41" width="1464" height="1002" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19810633" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30590716" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.05824176" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -570,7 +500,6 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.12942989" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -597,11 +526,94 @@
           <option name="timeStamp" value="5" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="6" />
+      <option name="time" value="10" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/dataloaders/datasets.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#466#3874#0" expanded="false" />
+            <element signature="e#4080#7699#0" expanded="false" />
+            <element signature="e#7948#12217#0" expanded="false" />
+            <element signature="e#12429#15221#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dataloaders/dataloaders.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="82" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dataloaders/data_preprocessing.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="88" selection-end-column="23" />
+          <folding>
+            <element signature="e#1#19#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/general/networks.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
+          <folding>
+            <element signature="e#1#22#0" expanded="false" />
+            <element signature="e#1091#2049#0" expanded="false" />
+            <element signature="e#1206#1827#0" expanded="false" />
+            <element signature="e#1863#2049#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BPF/BPF_trainers.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="384" column="0" selection-start-line="384" selection-start-column="0" selection-end-line="384" selection-end-column="0" />
+          <folding>
+            <element signature="e#502#619#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/general/losses.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="56" selection-end-column="18" />
+          <folding>
+            <element signature="e#186#1200#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DRO/main_DRO_tabular.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="720">
+          <caret line="48" column="0" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BPF/main_BPF_tabular.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="27" column="7" selection-start-line="27" selection-start-column="7" selection-end-line="27" selection-end-column="7" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+            <element signature="e#14841#14930#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/BPF/bash_BPF.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1020">
@@ -614,7 +626,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="465">
           <caret line="31" column="22" selection-start-line="31" selection-start-column="22" selection-end-line="31" selection-end-column="22" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -622,13 +633,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="945">
           <caret line="131" column="0" selection-start-line="131" selection-start-column="0" selection-end-line="131" selection-end-column="0" />
-          <folding>
-            <element signature="e#360#2507#0" expanded="false" />
-            <element signature="e#6139#8872#0" expanded="false" />
-            <element signature="e#6189#7819#0" expanded="false" />
-            <element signature="e#7888#8296#0" expanded="false" />
-            <element signature="e#8346#8872#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -638,14 +642,9 @@
           <caret line="123" column="13" selection-start-line="123" selection-start-column="13" selection-end-line="123" selection-end-column="13" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
-            <element signature="e#205#283#0" expanded="false" />
-            <element signature="e#359#532#0" expanded="false" />
             <element signature="e#560#614#0" expanded="false" />
             <element signature="e#656#725#0" expanded="false" />
-            <element signature="e#745#776#0" expanded="false" />
             <element signature="e#840#2308#0" expanded="false" />
-            <element signature="e#2346#2968#0" expanded="false" />
-            <element signature="e#2996#3443#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -655,6 +654,7 @@
         <state relative-caret-position="285">
           <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
           <folding>
+            <element signature="e#1#22#0" expanded="false" />
             <element signature="e#1091#2049#0" expanded="false" />
             <element signature="e#1206#1827#0" expanded="false" />
             <element signature="e#1863#2049#0" expanded="false" />
@@ -674,16 +674,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
           <caret line="134" column="99" selection-start-line="134" selection-start-column="99" selection-end-line="134" selection-end-column="99" />
-          <folding>
-            <element signature="e#1#19#0" expanded="true" />
-            <element signature="e#210#1815#0" expanded="false" />
-            <element signature="e#1930#2599#0" expanded="false" />
-            <element signature="e#2661#3024#0" expanded="false" />
-            <element signature="e#3084#3402#0" expanded="false" />
-            <element signature="e#3461#3908#0" expanded="false" />
-            <element signature="e#3962#4361#0" expanded="false" />
-            <element signature="e#4489#6852#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -692,11 +682,7 @@
         <state relative-caret-position="210">
           <caret line="297" column="76" selection-start-line="297" selection-start-column="76" selection-end-line="297" selection-end-column="76" />
           <folding>
-            <element signature="e#0#18#0" expanded="true" />
-            <element signature="e#501#15276#0" expanded="false" />
-            <element signature="e#501#618#0" expanded="false" />
-            <element signature="e#10277#11729#0" expanded="false" />
-            <element signature="e#15465#18688#0" expanded="false" />
+            <element signature="e#502#619#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -705,18 +691,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="750">
           <caret line="264" column="8" selection-start-line="264" selection-start-column="8" selection-end-line="265" selection-end-column="24" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-            <element signature="e#146#8444#0" expanded="false" />
-            <element signature="e#184#1085#0" expanded="false" />
-            <element signature="e#1119#1807#0" expanded="false" />
-            <element signature="e#1855#2194#0" expanded="false" />
-            <element signature="e#2398#7935#0" expanded="false" />
-            <element signature="e#7984#8444#0" expanded="false" />
-            <element signature="e#10818#11226#0" expanded="false" />
-            <element signature="e#11276#11802#0" expanded="false" />
-            <element signature="e#11844#13801#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -724,7 +698,101 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="405">
           <caret line="27" column="7" selection-start-line="27" selection-start-column="7" selection-end-line="27" selection-end-column="7" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+            <element signature="e#14841#14930#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BPF/bash_BPF.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1020">
+          <caret line="68" column="73" selection-start-line="68" selection-start-column="73" selection-end-line="68" selection-end-column="73" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DRO/bash_DRO.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="31" column="22" selection-start-line="31" selection-start-column="22" selection-end-line="31" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DRO/DRO_trainers.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="945">
+          <caret line="131" column="0" selection-start-line="131" selection-start-column="0" selection-end-line="131" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/general/utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="123" column="13" selection-start-line="123" selection-start-column="13" selection-end-line="123" selection-end-column="13" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+            <element signature="e#560#614#0" expanded="false" />
+            <element signature="e#656#725#0" expanded="false" />
+            <element signature="e#840#2308#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/general/networks.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
+          <folding>
+            <element signature="e#1#22#0" expanded="false" />
+            <element signature="e#1091#2049#0" expanded="false" />
+            <element signature="e#1206#1827#0" expanded="false" />
+            <element signature="e#1863#2049#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DRO/main_DRO_tabular.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/general/evaluation.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="134" column="99" selection-start-line="134" selection-start-column="99" selection-end-line="134" selection-end-column="99" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BPF/BPF_trainers.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="297" column="76" selection-start-line="297" selection-start-column="76" selection-end-line="297" selection-end-column="76" />
+          <folding>
+            <element signature="e#502#619#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BPF/BPF_classes.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="750">
+          <caret line="264" column="8" selection-start-line="264" selection-start-column="8" selection-end-line="265" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BPF/main_BPF_tabular.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="27" column="7" selection-start-line="27" selection-start-column="7" selection-end-line="27" selection-end-column="7" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+            <element signature="e#14841#14930#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -740,7 +808,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="375">
           <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -748,16 +815,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
           <caret line="134" column="99" selection-start-line="134" selection-start-column="4" selection-end-line="134" selection-end-column="99" />
-          <folding>
-            <element signature="e#1#19#0" expanded="true" />
-            <element signature="e#210#1815#0" expanded="false" />
-            <element signature="e#1930#2599#0" expanded="false" />
-            <element signature="e#2661#3024#0" expanded="false" />
-            <element signature="e#3084#3402#0" expanded="false" />
-            <element signature="e#3461#3908#0" expanded="false" />
-            <element signature="e#3962#4361#0" expanded="false" />
-            <element signature="e#4489#6852#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -766,11 +823,7 @@
         <state relative-caret-position="90">
           <caret line="8" column="69" selection-start-line="8" selection-start-column="69" selection-end-line="8" selection-end-column="69" />
           <folding>
-            <element signature="e#0#18#0" expanded="true" />
-            <element signature="e#501#15276#0" expanded="false" />
-            <element signature="e#501#618#0" expanded="false" />
-            <element signature="e#10277#11729#0" expanded="false" />
-            <element signature="e#15465#18688#0" expanded="false" />
+            <element signature="e#502#619#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -779,116 +832,47 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="221" column="22" selection-start-line="221" selection-start-column="22" selection-end-line="221" selection-end-column="22" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-            <element signature="e#146#8444#0" expanded="false" />
-            <element signature="e#184#1085#0" expanded="false" />
-            <element signature="e#1119#1807#0" expanded="false" />
-            <element signature="e#1855#2194#0" expanded="false" />
-            <element signature="e#2398#7935#0" expanded="false" />
-            <element signature="e#7984#8444#0" expanded="false" />
-            <element signature="e#10818#11226#0" expanded="false" />
-            <element signature="e#11276#11802#0" expanded="false" />
-            <element signature="e#11844#13801#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/networks/network_heads.py" />
     <entry file="file://$PROJECT_DIR$/networks/network_bodies.py" />
     <entry file="file://$PROJECT_DIR$/networks/network_utils.py" />
-    <entry file="file://$PROJECT_DIR$/dataloaders/dataloaders.py">
+    <entry file="file://$PROJECT_DIR$/general/postprocessing.py" />
+    <entry file="file://$PROJECT_DIR$/dataloaders/data_preprocessing.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="5" selection-start-line="6" selection-start-column="5" selection-end-line="6" selection-end-column="5" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="88" selection-end-column="23" />
+          <folding>
+            <element signature="e#1#19#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dataloaders/data_preprocessing.py">
+    <entry file="file://$PROJECT_DIR$/dataloaders/dataloaders.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="91" column="0" selection-start-line="91" selection-start-column="0" selection-end-line="91" selection-end-column="0" />
+        <state relative-caret-position="465">
+          <caret line="67" column="64" selection-start-line="67" selection-start-column="64" selection-end-line="67" selection-end-column="64" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/general/losses.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="28" column="35" selection-start-line="28" selection-start-column="35" selection-end-line="28" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dataloaders/datasets.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-135">
-          <caret line="219" column="63" selection-start-line="219" selection-start-column="63" selection-end-line="219" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BPF/BPF_classes.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="750">
-          <caret line="264" column="8" selection-start-line="264" selection-start-column="8" selection-end-line="265" selection-end-column="24" />
+        <state relative-caret-position="-12">
+          <caret line="49" column="35" selection-start-line="37" selection-start-column="0" selection-end-line="75" selection-end-column="18" />
           <folding>
-            <element signature="e#0#15#0" expanded="true" />
-            <element signature="e#146#8444#0" expanded="false" />
-            <element signature="e#184#1085#0" expanded="false" />
-            <element signature="e#1119#1807#0" expanded="false" />
-            <element signature="e#1855#2194#0" expanded="false" />
-            <element signature="e#2398#7935#0" expanded="false" />
-            <element signature="e#7984#8444#0" expanded="false" />
-            <element signature="e#10818#11226#0" expanded="false" />
-            <element signature="e#11276#11802#0" expanded="false" />
-            <element signature="e#11844#13801#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/general/postprocessing.py" />
-    <entry file="file://$PROJECT_DIR$/general/evaluation.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="134" column="99" selection-start-line="134" selection-start-column="99" selection-end-line="134" selection-end-column="99" />
-          <folding>
-            <element signature="e#1#19#0" expanded="true" />
-            <element signature="e#210#1815#0" expanded="false" />
-            <element signature="e#1930#2599#0" expanded="false" />
-            <element signature="e#2661#3024#0" expanded="false" />
-            <element signature="e#3084#3402#0" expanded="false" />
-            <element signature="e#3461#3908#0" expanded="false" />
-            <element signature="e#3962#4361#0" expanded="false" />
-            <element signature="e#4489#6852#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DRO/bash_DRO.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="31" column="22" selection-start-line="31" selection-start-column="22" selection-end-line="31" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BPF/BPF_trainers.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="297" column="76" selection-start-line="297" selection-start-column="76" selection-end-line="297" selection-end-column="76" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-            <element signature="e#501#15276#0" expanded="false" />
-            <element signature="e#501#618#0" expanded="false" />
-            <element signature="e#10277#11729#0" expanded="false" />
-            <element signature="e#15465#18688#0" expanded="false" />
+            <element signature="e#186#1200#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/general/networks.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
+        <state relative-caret-position="345">
+          <caret line="23" column="25" selection-start-line="23" selection-start-column="25" selection-end-line="23" selection-end-column="25" />
           <folding>
+            <element signature="e#1#22#0" expanded="false" />
             <element signature="e#1091#2049#0" expanded="false" />
             <element signature="e#1206#1827#0" expanded="false" />
             <element signature="e#1863#2049#0" expanded="false" />
@@ -896,64 +880,121 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DRO/DRO_trainers.py">
+    <entry file="file://$PROJECT_DIR$/BPF/BPF_trainers.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="945">
-          <caret line="131" column="0" selection-start-line="131" selection-start-column="0" selection-end-line="131" selection-end-column="0" />
+        <state relative-caret-position="612">
+          <caret line="243" column="127" selection-start-line="243" selection-start-column="12" selection-end-line="243" selection-end-column="127" />
           <folding>
-            <element signature="e#360#2507#0" expanded="false" />
-            <element signature="e#6139#8872#0" expanded="false" />
-            <element signature="e#6189#7819#0" expanded="false" />
-            <element signature="e#7888#8296#0" expanded="false" />
-            <element signature="e#8346#8872#0" expanded="false" />
+            <element signature="e#502#619#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/BPF/main_BPF_tabular.py">
+    <entry file="file://$PROJECT_DIR$/DRO/DRO_trainers.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="27" column="7" selection-start-line="27" selection-start-column="7" selection-end-line="27" selection-end-column="7" />
-          <folding />
+        <state relative-caret-position="1335">
+          <caret line="157" column="75" selection-start-line="157" selection-start-column="75" selection-end-line="157" selection-end-column="75" />
+          <folding>
+            <element signature="e#360#2507#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/general/utils.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="123" column="13" selection-start-line="123" selection-start-column="13" selection-end-line="123" selection-end-column="13" />
+        <state relative-caret-position="161">
+          <caret line="11" column="68" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="68" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
-            <element signature="e#205#283#0" expanded="false" />
-            <element signature="e#359#532#0" expanded="false" />
             <element signature="e#560#614#0" expanded="false" />
             <element signature="e#656#725#0" expanded="false" />
-            <element signature="e#745#776#0" expanded="false" />
             <element signature="e#840#2308#0" expanded="false" />
-            <element signature="e#2346#2968#0" expanded="false" />
-            <element signature="e#2996#3443#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BPF/BPF_classes.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="229" column="37" selection-start-line="229" selection-start-column="37" selection-end-line="229" selection-end-column="37" />
+          <folding>
+            <element signature="e#0#15#0" expanded="false" />
+            <element signature="e#353#8652#0" expanded="false" />
+            <element signature="e#1327#2015#0" expanded="false" />
+            <element signature="e#2063#2402#0" expanded="false" />
+            <element signature="e#2606#8143#0" expanded="false" />
+            <element signature="e#8697#12026#0" expanded="false" />
+            <element signature="e#14664#14859#0" expanded="false" />
+            <element signature="e#16607#18564#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/general/evaluation.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="660">
+          <caret line="160" column="0" selection-start-line="160" selection-start-column="0" selection-end-line="160" selection-end-column="0" />
+          <folding>
+            <element signature="e#210#1815#0" expanded="false" />
+            <element signature="e#1930#2599#0" expanded="false" />
+            <element signature="e#2661#3024#0" expanded="false" />
+            <element signature="e#3084#3402#0" expanded="false" />
+            <element signature="e#3461#3908#0" expanded="false" />
+            <element signature="e#3962#4361#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DRO/main_DRO_tabular.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="257">
+          <caret line="311" column="0" selection-start-line="327" selection-start-column="8" selection-end-line="327" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BPF/main_BPF_tabular.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="470">
+          <caret line="281" column="43" selection-start-line="281" selection-start-column="43" selection-end-line="281" selection-end-column="43" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+            <element signature="e#14841#14930#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DRO/bash_DRO.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dataloaders/datasets.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="287" column="104" selection-start-line="287" selection-start-column="104" selection-end-line="287" selection-end-column="104" />
+          <folding>
+            <element signature="e#466#3874#0" expanded="false" />
+            <element signature="e#4080#7699#0" expanded="false" />
+            <element signature="e#7948#12217#0" expanded="false" />
+            <element signature="e#12429#15221#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/BPF/bash_BPF.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1020">
-          <caret line="68" column="73" selection-start-line="68" selection-start-column="73" selection-end-line="68" selection-end-column="73" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DRO/main_DRO_tabular.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="720">
-          <caret line="48" column="0" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="30" />
+        <state relative-caret-position="285">
+          <caret line="19" column="12" selection-start-line="19" selection-start-column="12" selection-end-line="19" selection-end-column="12" />
           <folding />
         </state>
       </provider>
     </entry>
   </component>
   <component name="webServersAuthStorage">
-    <data>AAAAcOK6T7+zVQrzzOhfGNRnLMKxIXOpG4jlRopHQAmwSnmU+vCMV1feCjx98/K+hiPJ/pfy37mpcwxAlnGyDRlUTzkdHthUPfnkbtgecDwT8pJhH2zgpIxcX6Xwh/2hxaTgCPQNjHop5jUcShSuB5ykMU+8kZ8AOL74kNZ8ooCX4PLy</data>
+    <data>AAAAcE/K1Z2YVb++HqZdxQ9vzbNLaS8aNXgVNMoYM86Eux6v4WcnnEWJt2YGXY7bf3NNsK2NBDjRaH92QJXuegVUA7R8eR0FNTqRiRPRR+yo31SYeHxP+fy1wU/FOjZVm5MhMn+7rPZ8ykrCJDXezz9Y9ewtyKpDLjDmvCoq3geYfa+q</data>
   </component>
 </project>

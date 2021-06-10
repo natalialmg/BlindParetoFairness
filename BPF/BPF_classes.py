@@ -1,9 +1,15 @@
 import argparse
 import sys
 sys.path.append("../")
+
+import os
 import torch
-from general.utils import save_json
+from torch import optim
+from general.utils import save_json,mkdir,model_params_load
+from general.losses import losses,metrics
+from general.networks import VanillaNet, FCBody
 import numpy as np
+from general.evaluation import epoch_persample_evaluation
 
 class BPF_projector():
     def __init__(self, **kwargs):
@@ -25,7 +31,7 @@ class BPF_projector():
             # self.proj_algo = minmaxTF_simplex_dykjstra_cyclic(self.ngroups,self.epsilon,self.nabla,
             #                                              self.K,iterations= self.proj_iterations)
         self.cost_delta_improve = 0.05
-        self.max_weight_change = 0.2
+        self.max_weight_change = 0.05
         self.eta_increase_patience = 5
         self.decay = 0.75
 
@@ -228,13 +234,13 @@ class BPF_config(argparse.Namespace):
         self.basedir = 'models/'
         self.model_name = 'vanilla_model'
         self.best_model = 'weights_best.pth'
-        self.last_model = 'weights_last.pth'
-        self.learner_model = 'weights_learner.pth'
+        self.best_model_train = 'weights_best_train.pth'
+        # self.learner_model = 'weights_learner.pth'
 
         self.seed = 42
         self.GPU_ID = 0
 
-        self.balance_sampler = False
+        # self.balance_sampler = False
         self.weights_tag = 'weights'
         self.sampler_tag = 'weights_sampler' #in case the sampler option instead of IW is activated
         self.BATCH_SIZE = 32
@@ -248,14 +254,14 @@ class BPF_config(argparse.Namespace):
         self.hidden_layers = None
         self.batchnorm = False
         self.regression = False
-        self.type_loss = 'L2'
+        self.type_loss = 'CE'
         self.type_metric = []
 
         ## Game ##
         self.GAMES = 5
-        self.GAMES_WARMUP = 5
+        self.GAMES_WARMUP = 30
         self.patience = 15
-        self.val_stopper = True
+        self.val_stopper = False
 
         ## Learner ##
         self.EPOCHS_LEARNER = 1
@@ -268,10 +274,10 @@ class BPF_config(argparse.Namespace):
 
         ## Regulator ##
         self.EPOCHS_REGULATOR = 500
-        self.delta_improve_regulator = 0.02
-        self.delta_weight_change_regulator = 0.2
+        self.delta_improve_regulator = 0.05
+        self.delta_weight_change_regulator = 0.05
         self.lrdecay = 0.75
-        self.eta = 0.02 #learning rate regulator
+        self.eta = 5 #learning rate regulator
 
         ## BPF Projector parameters ##
         self.epsilon = 0
@@ -330,9 +336,114 @@ class BPF_config(argparse.Namespace):
         print('Saving config json file in : ', save_path)
 
 
+class BPF_model():
+
+    def __init__(self, config, classifier_network = None):
+        self.config = config
+
+        # mkdir(self.config.basedir)
+        mkdir(os.path.join(self.config.basedir,self.config.model_name))
+
+
+        #Make classifier network
+        if classifier_network is None:
+            self.classifier_network = VanillaNet(self.config.n_utility, body=FCBody(self.config.n_features,
+                                                                          hidden_units=self.config.hidden_layers,
+                                                                          batchnorm=self.config.batchnorm))
+            self.classifier_network = self.classifier_network.to(self.config.DEVICE)
+        else:
+            self.classifier_network = classifier_network
+
+        # Make optimizer
+        if self.config.optimizer == 'adam':
+            self.optimizer = optim.Adam(self.classifier_network.parameters(), lr=self.config.LEARNING_RATE,
+                                   weight_decay=self.config.optim_weight_decay)
+        elif self.config.optimizer == 'RMSprop':
+                self.optimizer = optim.RMSprop(self.classifier_network.parameters(), lr=self.config.LEARNING_RATE,
+                                          weight_decay=self.config.optim_weight_decay)
+        else:
+            print(' Loading SGD optimizer as default')
+            self.optimizer = optim.SGD(self.classifier_network.parameters(), lr=self.config.LEARNING_RATE, momentum=0.9, nesterov=True,
+                                       weight_decay=self.config.optim_weight_decay)
+
+        ## Criterion
+        self.criterion = losses(type_loss=self.config.type_loss,
+                           regression=self.config.regression)
+
+        self.metric_dic = None
+        if len(self.config.type_metric) > 0:
+            self.metric_dic = {}
+            for metric_tag in self.config.type_metric:
+                self.metric_dic[metric_tag] = metrics(type_loss=metric_tag)
+
+        print('---------------- BPF model created ----------------------------')
+        print()
+        print('Model directory:', self.config.basedir + self.config.model_name + '/')
+        print()
+        print('-- Config file :')
+        print(self.config)
+        print('')
+        print()
+        print('-- Network : ')
+        print(self.classifier_network)
+        print()
+        print()
+        print('-- Optimizer : ')
+        print(self.optimizer)
+        print()
+        print()
+        mkdir(self.config.basedir)
+        mkdir(self.config.basedir+self.config.model_name+'/')
+
+        self.history = {}
+
+    def load_network(self, load_file=None):
+        # import os
+        if os.path.exists(load_file):
+            print(' Loading : ', load_file)
+            model_params_load(load_file, self.classifier_network, self.optimizer, self.config.DEVICE)
+
+    def train(self,pd_train, pd_val, dataloader_functional):
+
+
+
+        ## Projector
+        from BPF.BPF_classes import BPF_projector
+        print('-- BPF Projector')
+        max_projector = BPF_projector(eta=self.config.eta, rho=self.config.rho,
+                                      upper=self.config.upper, epsilon=self.config.epsilon,
+                                      cost_delta_improve=self.config.delta_improve_regulator,
+                                      decay=self.config.lrdecay, max_weight_change=self.config.delta_weight_change_regulator)
+        print()
+
+        self.config.save_json()
+
+        ## Trainer
+        from BPF.BPF_trainers import BPF_trainer
+        print('---------------------------- TRAINING ----------------------------')
+        self.history = BPF_trainer(dataloader_functional, pd_train, pd_val,
+                              self.optimizer, self.classifier_network, self.criterion, self.config, max_projector,metrics_dic = self.metric_dic,
+                              val_stopper=self.config.val_stopper, warmup=self.config.GAMES_WARMUP)
+
+        print(' Saving .... ')
+        for key in self.history.keys():
+            self.history[key] = np.array(self.history[key]).tolist()
+
+        save_json(self.history, self.config.basedir + self.config.model_name + '/history.json')
+        print('history file saved on : ', self.config.basedir + self.config.model_name + '/history.json')
+
+
+        return self.history
+
+    def eval(self,eval_dataloader):
+        pd_eval = epoch_persample_evaluation(eval_dataloader, self.classifier_network, self.criterion, self.config.DEVICE,
+                                   metrics_dic=self.metric_dic)
+        return pd_eval
 
 
 def l1_box_projection(y,c,e,u):
+
+
 
     def get_x(t):
         return np.minimum(np.maximum(e,y-t),u)

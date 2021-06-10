@@ -97,15 +97,19 @@ def DRO_trainer(train_dataloader, val_dataloader,
             tag_print.append(metric)
 
 
-    if val_stopper:
-        metric_stopper =  metric_stopper + '_val'
-    else:
-        metric_stopper = metric_stopper + '_train'
+    # if val_stopper:
+    #     metric_stopper =  metric_stopper + '_val'
+    # else:
+    #     metric_stopper = metric_stopper + '_train'
+
+
 
     stop = False
     epoch = 0
-    stopper = early_stopping(config.patience, 0, np.infty)
 
+    best_epoch = {'train': 0, 'val': 0}
+    stopper = early_stopping(config.patience, 0, np.infty)
+    stopper_train = early_stopping(config.patience, 0, np.infty)
 
     while (not stop) & (epoch < config.EPOCHS):
 
@@ -127,14 +131,28 @@ def DRO_trainer(train_dataloader, val_dataloader,
             history[key+'_train'].append(np.round(output_train[key],precision))
             history[key+'_val'].append(np.round(output_val[key],precision))
 
-        model_params_save(config.basedir + config.model_name + '/' + config.last_model, classifier_network, optimizer) #save last model
-        save, stop = stopper.evaluate(history[metric_stopper][-1])
+        # model_params_save(config.basedir + config.model_name + '/' + config.last_model, classifier_network, optimizer) #save last model
 
-        if save:
-            history['epoch_best'] = epoch
+        ### bes Validation
+        save_val, stop_val = stopper.evaluate(history[metric_stopper + '_val'][-1])
+        if save_val:
+            best_epoch['val'] = epoch
             print('saving best model, epoch: ', epoch)
             model_params_save(config.basedir + config.model_name + '/' + config.best_model, classifier_network,
                               optimizer)  # save best model
+
+        ### best Train
+        save_train, stop_train = stopper_train.evaluate(history[metric_stopper + '_train'][-1])
+        if save_train:
+            best_epoch['train'] = epoch
+            print('saving best model, epoch: ', epoch)
+            model_params_save(config.basedir + config.model_name + '/' + config.best_model_train, classifier_network,
+                              optimizer) # save best model train
+
+        if val_stopper:
+            stop = stop_val
+        else:
+            stop = stop_train
 
         if  epoch < config.EPOCHS_WARMUP:
             stop = False #stop = false if we are still in the warmup epochs
@@ -144,8 +162,10 @@ def DRO_trainer(train_dataloader, val_dataloader,
             string_print = 'Epoch: ' + str(epoch) + '; lr: ' + str(optimizer.param_groups[0]['lr'])
             for tag in tag_print:
                 string_print = string_print + ' |' + tag + '_tr/val : ' + str(history[tag+'_train'][-1]) + ',' +str(history[tag+'_val'][-1])
-            print(string_print+' |best loss : ' + str(history[metric_stopper][history['epoch_best']]) + ' , stop_c : ' + str(stopper.counter))
+            print(string_print+' |best loss (tr,val) : ' + str(history[metric_stopper + '_train' ][best_epoch['train']]) +\
+                  ',' + str(history[metric_stopper + '_val' ][best_epoch['val']]) + ' , stop_c : ' + str(stopper.counter))
 
+        history['best_epoch'] = best_epoch
         epoch += 1
 
     # -------- END TRAINING --------#
@@ -165,7 +185,7 @@ class DRO_config(argparse.Namespace):
         self.basedir = 'models/'
         self.model_name = 'vanilla_model'
         self.best_model = 'weights_best.pth'
-        self.last_model = 'weights_last.pth'
+        self.best_model_train = 'weights_best_train.pth'
 
         self.seed = 42
         self.GPU_ID = 0
