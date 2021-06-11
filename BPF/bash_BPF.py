@@ -7,12 +7,17 @@ from general.utils import run_command
 dataset = 'adult'
 # dataset = 'lawschool'
 # dataset = 'lawschool_nofaminc'
-# dataset = 'compas'
+dataset = 'compas'
+# dataset = 'synth1d2c'
+# dataset = 'synth2d4c'
+
 basedir = '/data/natalia/models/'+dataset+'/BPF/'
 
 file_bash_name = dataset+'_iw_bash.sh'
 
 model_name_prefix = 'BPF_512_adam1e5_wreg1e2_'
+
+
 # model_name_prefix = 'BPF_512_adam1e5_wreg1e1_'
 # model_name_prefix = 'BPF_512_adam1e5_'
 # model_name_prefix = 'BPF_64_adam1e5_'
@@ -21,6 +26,13 @@ model_name_prefix = 'BPF_512_adam1e5_wreg1e2_'
 optim = 'adam' #RMSprop
 lr=1e-5
 regweight = 1e-2
+
+
+if 'synth' in dataset:
+    model_name_prefix = 'BPF_512_adam1e4_'
+    lr=1e-4
+    regweight = 0
+
 
 #Projector step
 eta = 5
@@ -62,27 +74,40 @@ rho_list = ['01','05','1']
 
 epsilon_list = ['1e2','1e3']
 rho_list = ['01','02','03','04','05','06','07','08','09','1']
+rho_list = ['005','015','025','035','045','055','065','075','085']
+
+
+epsilon_list = ['1e2']
+rho_list = ['005','01','02','03','04','05','06','07','08','09','1','015','025','035','045','055','065','075','085']
+
+
+# epsilon_list = ['1e3']
+# rho_list = ['01','02','03','04','05','06','07','08','09','1']
+# rho_list = ['005','015','025','035','045','055','065','075','085']
+
+
 # rho_list = ['1','01','05']
 # rho_list = ['005','01','02','03','04','06','07','08','09']
 
 
-epsilon_list = ['1e3']
-rho_list = ['01','05','1']
+# epsilon_list = ['1e3']
+# rho_list = ['1']
 
 
 ### lawschool
 # epsilon_list = ['1e2','1e3']
 # epsilon_list = ['1e2','1e3']
 
-epsilon_list = ['1e2']
-# rho_list = ['005','015','025','035']
-rho_list = ['045','055','065','075','085']
+epsilon_list = ['1e3']
+rho_list = ['1','01','05']
 
+rho_list = ['005','01','02','03','04','06','07','08','09']
+rho_list = ['015','025','035','045','055','065','075','085']
+# rho_list = ['005','015','025','035']
+# rho_list = ['045','055','065','075','085']
+rho_list = ['08']
 
 games=300
-
-
-
 
 regression = False
 loss_list = ['CE']
@@ -90,16 +115,19 @@ seed_list=[42]
 split_list = [1,2,3,4,5]
 split_list = [1,2,3,4,5]
 
-# split_list = [1]
+split_list = [2,3,4]
+split_list = [4]
+
 train = True
 
-gpu = 0
+gpu = 1
 with open(file_bash_name,'w') as f:
     for split in split_list:
         for seed in seed_list:
             for loss in loss_list:
-                for rho_str in rho_list:
-                    for epsilon_str in epsilon_list:
+                for epsilon_str in epsilon_list:
+                    for rho_str in rho_list:
+
                         epsilon = epsilon_dic[epsilon_str]
                         rho = rho_dic[rho_str]
 

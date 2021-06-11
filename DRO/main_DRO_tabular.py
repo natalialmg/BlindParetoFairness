@@ -20,7 +20,6 @@ cparser.add_argument('--train', action='store', default=True,type=lambda x: bool
 cparser.add_argument('--dataset', action='store', default='adult', type=str,help='dataset')
 cparser.add_argument('--utility', action='store', default='', type=str,help='utility string tags')
 cparser.add_argument('--norm_std', action='store', default=True,type=lambda x: bool(strtobool(x)),help='boolean: apply standarization to covariantes')
-# cparser.add_argument('--seed_dataset', action='store', default=42, type=int,help='seed for dataset partitions if applicable')
 cparser.add_argument('--split', action='store', default=1, type=int,help='split for dataset partitions if applicable')
 cparser.add_argument('--nsplits', action='store', default=5, type=int,help='n splits for dataset partitions if applicable')
 
@@ -43,20 +42,19 @@ cparser.add_argument('--batchnorm', action='store', default=False,type=lambda x:
 cparser.add_argument('--regression', action='store', default=False,type=lambda x: bool(strtobool(x)),help='boolean: regression (default false)')
 
 
-
 # DRO
 cparser.add_argument('--eta', action='store', default=1, type=float, help='DRO eta threshold')
 
 
 cparser = cparser.parse_args()
 
-datasets_included = ['adult','compas', 'lawschool','lawschool_nofaminc']
+datasets_included = ['adult','compas', 'lawschool','lawschool_nofaminc','synth1d2c','synth2d4c']
 
 if __name__== '__main__':
 
     ### Data Setting
 
-    from dataloaders.datasets import UCIadult_pandas, Compas_pandas, lawschool_pandas
+    from dataloaders.datasets import UCIadult_pandas, Compas_pandas, lawschool_pandas,synthetic_pandas
     from dataloaders.data_preprocessing import balanced_split
 
     if cparser.dataset not in datasets_included:
@@ -103,6 +101,22 @@ if __name__== '__main__':
                                                        seed=cparser.seed,
                                                        split=cparser.split,
                                                        n_splits=cparser.nsplits)
+
+    if cparser.dataset == 'synth1d2c':
+        cparser.utility = 'y'
+        pd_train, pd_test, cov_tags = synthetic_pandas(datatype='1d_2classes', utility=cparser.utility,
+                                                        norm_std=cparser.norm_std,
+                                                        seed=cparser.seed,
+                                                        split=cparser.split,
+                                                        n_splits=cparser.nsplits)
+
+    if cparser.dataset == 'synth2d4c' :
+        cparser.utility = 'y'
+        pd_train, pd_test, cov_tags = synthetic_pandas(datatype='2d_4classes', utility=cparser.utility,
+                                                        norm_std=cparser.norm_std,
+                                                        seed=cparser.seed,
+                                                        split=cparser.split,
+                                                        n_splits=cparser.nsplits)
 
     ## Split train, into train and val balancing for the stratification tag (dataset dependent)
     tag = 'strat'

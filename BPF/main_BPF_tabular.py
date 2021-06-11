@@ -60,13 +60,13 @@ cparser.add_argument('--optim_regw', action='store', default=0, type=float, help
 
 cparser = cparser.parse_args()
 
-datasets_included = ['adult','compas', 'lawschool','lawschool_nofaminc']
+datasets_included = ['adult','compas', 'lawschool','lawschool_nofaminc','synth1d2c','synth2d4c' ]
 
 if __name__== '__main__':
 
     ### Data Setting
 
-    from dataloaders.datasets import UCIadult_pandas, Compas_pandas, lawschool_pandas
+    from dataloaders.datasets import UCIadult_pandas, Compas_pandas, lawschool_pandas,synthetic_pandas
     from dataloaders.data_preprocessing import balanced_split
 
     if cparser.dataset not in datasets_included:
@@ -113,6 +113,26 @@ if __name__== '__main__':
                                                        seed=cparser.seed,
                                                        split=cparser.split,
                                                        n_splits=cparser.nsplits)
+
+
+
+    if cparser.dataset == 'synth1d2c' :
+        cparser.utility = 'y'
+        pd_train, pd_test, cov_tags = synthetic_pandas(datatype='1d_2classes', utility=cparser.utility,
+                                                        norm_std=cparser.norm_std,
+                                                        seed=cparser.seed,
+                                                        split=cparser.split,
+                                                        n_splits=cparser.nsplits)
+
+    if cparser.dataset == 'synth2d4c' :
+        cparser.utility = 'y'
+        pd_train, pd_test, cov_tags = synthetic_pandas(datatype='2d_4classes', utility=cparser.utility,
+                                                        norm_std=cparser.norm_std,
+                                                        seed=cparser.seed,
+                                                        split=cparser.split,
+                                                        n_splits=cparser.nsplits)
+
+
 
     ## Split train, into train and val balancing for the stratification tag (dataset dependent)
     tag = 'strat'
@@ -285,140 +305,3 @@ if __name__== '__main__':
 
         pd_summary.to_csv(config.basedir + config.model_name + pd_summary_list[ix_model], index=0)
         print('Evaluation csv saved on : ', config.basedir + config.model_name + pd_summary_list[ix_model])
-
-
-
-
-
-
-
-
-
-
-    # ######################### Classifier/Optimizer/Criteria  ##############################
-    # from general.networks import VanillaNet, FCBody
-    # from torch import optim
-    # from general.losses import losses
-    #
-    # classifier_network = VanillaNet(config.n_utility, body=FCBody(config.n_features,
-    #                                                               hidden_units=config.hidden_layers,
-    #                                                               batchnorm=config.batchnorm))
-    # classifier_network = classifier_network.to(config.DEVICE)
-    #
-    # if config.optimizer == 'adam':
-    #     optimizer = optim.Adam(classifier_network.parameters(), lr=config.LEARNING_RATE,
-    #                            weight_decay=config.optim_weight_decay)
-    #
-    # else:
-    #     if config.optimizer == 'RMSprop':
-    #         optimizer = optim.RMSprop(classifier_network.parameters(), lr=config.LEARNING_RATE,
-    #                                   weight_decay=config.optim_weight_decay)
-    #     else:
-    #         optimizer = optim.SGD(classifier_network.parameters(), lr=config.LEARNING_RATE)
-    #
-    # criterion = losses(type_loss=config.type_loss,
-    #                    regression=config.regression)
-    #
-    # print('-- Network : ')
-    # print(classifier_network)
-    # print()
-    #
-    # print('-- Optimizer : ')
-    # print(optimizer)
-    # print()
-    #
-    # ######################### Projection Class  ##############################
-    #
-    # from BPF.BPF_classes import BPF_projector
-    #
-    # print('-- BPF Projector')
-    # max_projector = BPF_projector(eta=config.eta, rho=config.rho,
-    #                               upper=config.upper, epsilon=config.epsilon,
-    #                               cost_delta_improve = config.delta_improve_regulator,
-    #                               decay = config.lrdecay, max_weight_change=config.delta_weight_change_regulator)
-    # print()
-    #
-    # ######################### Trainer  ##############################
-    # from BPF.BPF_trainers import BPF_trainer
-    # print('---------------------------- TRAINING ----------------------------')
-    # history = BPF_trainer(dataloader_functional, pd_train, pd_val,
-    #                       optimizer, classifier_network, criterion, config, max_projector,
-    #                       val_stopper=config.val_stopper,warmup=config.GAMES_WARMUP)
-    #
-    # print(' Saving .... ')
-    # config.save_json()
-    # for key in history.keys():
-    #     history[key] = np.array(history[key]).tolist()
-    #
-    # save_json(history, config.basedir + config.model_name + '/history.json')
-    # print('history file saved on : ', config.basedir + config.model_name + '/history.json')
-    #
-    # ######################### Full evaluation  ##############################
-    #
-    # from BPF.BPF_trainers import epoch_persample_evaluation
-    #
-    # dataset_tag = ['train', 'val', 'test']
-    # list_pd = [pd_train, pd_val, pd_test]
-    #
-    # ix = 0
-    # for pd_data in list_pd:
-    #     eval_dataloader = dataloader_functional(pd_data, sampler_on=False, shuffle=False, weights_tag=None)
-    #
-    #     output = epoch_persample_evaluation(eval_dataloader, classifier_network, criterion, config.DEVICE,
-    #                                         metrics_dic=None)
-    #
-    #     # Save evaluation
-    #     y_pred_tags = ['utility_pest_' + str(_) for _ in range(config.n_utility)]
-    #     pd_results_ix = pd.DataFrame(data=np.array(output['utility_pred']).transpose(), columns=y_pred_tags)
-    #     pd_results_ix['utility_gt'] = output['utility_gt']
-    #     pd_results_ix['sample_index'] = pd_data['sample_index'].values
-    #     pd_results_ix['dataset'] = dataset_tag[ix]
-    #     if ix == 0:
-    #         pd_results = pd_results_ix.copy()
-    #     else:
-    #         pd_results = pd.concat([pd_results, pd_results_ix])
-    #     ix += 1
-    #
-    # from general.evaluation import get_output_list, get_cross_entropy, get_brier_score, get_error, get_soft_error
-    # y_pred, y_gt = get_output_list(pd_results, y_pred_tags, y_gt_tag='utility_gt')
-    # metrics_fn = [get_cross_entropy, get_brier_score, get_error, get_soft_error]
-    # metrics_tags = ['ce', 'bs', 'err', 'softerr']
-    #
-    # for ix in np.arange(len(metrics_tags)):
-    #     metric_results = metrics_fn[ix](y_gt, y_pred)
-    #     pd_results[metrics_tags[ix]] = metric_results
-    #
-    # pd_results.to_csv(config.basedir + config.model_name + '/pd_eval.csv', index=0)
-    # print('Evaluation csv saved on : ', config.basedir + config.model_name + '/pd_eval.csv')
-    #
-    # ######################### Summary results  ##############################
-    #
-    # # dataframe with columns: dataset, rho_eval, metric, worst, best, avg
-    # rho_eval = np.linspace(0, 1, 11)[1:-1]
-    # row = []
-    # for dataset in dataset_tag:
-    #     pd_filter = pd_results.loc[pd_results.dataset == dataset]
-    #     for metric in metrics_tags:
-    #         mvalues = pd_filter[metric].values
-    #         mvalues = np.sort(mvalues)[::-1]
-    #         for rho in rho_eval:
-    #             nworst = int(np.floor(mvalues.shape[0] * rho))
-    #             worst_group = np.mean(mvalues[0:nworst])
-    #             best_group = np.mean(mvalues[nworst:])
-    #             row.append([dataset, metric, rho, worst_group,
-    #                         best_group, np.mean(mvalues)])
-    #
-    # pd_summary = pd.DataFrame(data=row, columns=['dataset', 'metric', 'rho_eval', 'worst', 'best', 'avg'])
-    #
-    # # include split,epsilon_model, rho_model
-    # pd_summary['split'] = cparser.split
-    # pd_summary['epsilon_model'] = config.epsilon
-    # pd_summary['rho_model'] = config.rho
-    #
-    # pd_summary.to_csv(config.basedir + config.model_name + '/pd_summary_results.csv', index=0)
-    # print('Evaluation csv saved on : ', config.basedir + config.model_name + '/pd_summary_results.csv')
-    #
-    #
-    #
-    #
-    #

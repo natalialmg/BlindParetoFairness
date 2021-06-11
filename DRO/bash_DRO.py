@@ -3,13 +3,17 @@ sys.path.append("../")
 
 from general.utils import run_command
 
-dataset = 'lawschool'
-
+# dataset = 'lawschool'
 # dataset = 'lawschool'
 # dataset = 'lawschool_nofaminc'
 # dataset = 'adult'
 
-# dataset = 'compas'
+dataset = 'compas'
+
+dataset = 'synth1d2c'
+# dataset = 'synth2d4c'
+
+
 basedir = '/data/natalia/models/'+dataset+'/DRO/'
 
 file_bash_name = dataset+'_iw_bash.sh'
@@ -23,6 +27,12 @@ optim = 'adam' #RMSprop
 lr=1e-5
 regweight = 1e-2
 
+if 'synth' in dataset:
+    model_name_prefix = 'DRO_512_adam1e4_'
+    lr=1e-4
+    regweight = 0
+
+
 ## Network
 hlayers = '512x1'
 batchsize=128
@@ -31,26 +41,28 @@ eta_dic={'0':0, '1':1, '01':0.1, '02':0.2, '03':0.3, '04':0.4,
          '05':0.5, '06':0.6,  '07':0.7, '08':0.8, '09':0.9} #eta = eta_coeff * max(eta) (e.g.: eta_coeff * np.log(2) if CE)
 
 
-eta_dic={'0':0, '1':1,'01':0.1, '02':0.2, '03':0.3, '04':0.4, '05':0.5, '06':0.6,  '07':0.7, '08':0.8, '09':0.9,'015':0.15, '025':0.25, '035':0.35, '045':0.45,
+eta_dic={'0':0, '1':1,'01':0.1, '02':0.2, '03':0.3, '04':0.4, '05':0.5, '06':0.6,  '07':0.7, '08':0.8, '09':0.9, '005':0.05, '015':0.15, '025':0.25, '035':0.35, '045':0.45,
          '055':0.55, '065':0.65,  '075':0.75, '085':0.85, '095':0.95}
 
 # eta_list = ['0','1','05','02']
 eta_list = ['0','01','02','03','04','05','06','07','08','09','1']
 
+eta_list = ['015','025','035','045','055','065','075','085']
+eta_list = ['015','025','035','045']
 # eta_list = ['01','04','05','07']
 # eta_list = ['06']
 
-# eta_list = ['1','05','0']
+# eta_list = ['1','05','0','01','02']
 
 regression = False
 loss_list = ['CE']
 
 epochs=300
 seed_list=[42]
-split_list = [1,2]
-# split_list = [1]
-split_list = [1,2,3,4,5]
-train = False
+split_list = [5]
+# split_list = [3]
+# split_list = [1,2,3,4,5]
+train = True
 
 gpu = 1
 
@@ -74,7 +86,7 @@ with open(file_bash_name,'w') as f:
                     cmd = cmd + ' --eta={} --hlayers="{}" --epochs={} --seed={} --split={}'.format( eta, hlayers, epochs, seed, split)
                     cmd = cmd + ' --loss="{}" --regression={} --batch={} > {}.txt'.format(loss, regression, batchsize, out_file_ext)
 
-                    run_command(cmd, minmem=1.2, use_env_variable=True, admissible_gpus=[0,1], sleep=10)
+                    run_command(cmd, minmem=1.0, use_env_variable=True, admissible_gpus=[0,1], sleep=20)
                     f.write(cmd + '\n\n\n')
                 f.write('\n\n\n')
                 f.write('\n\n\n')

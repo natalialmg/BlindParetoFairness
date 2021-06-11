@@ -292,6 +292,10 @@ def synthetic_pandas( datatype='1d_2classes', utility='y', norm_std=True, seed=4
         pd_data = pd.read_csv(os.path.join(dirdata_synthetic, 'bpf_dataset_1covariate_2classes.csv'))
         cov_tags = ['x']
 
+    if datatype == '2d_4classes':
+        pd_data = pd.read_csv(os.path.join(dirdata_synthetic, 'bpf_dataset_2covariate_4classes.csv'))
+        cov_tags = ['x_1','x_2']
+
     ## set utility variables and reincorporate samples index
     pd_data['utility'] = pd_data[utility].values
     pd_data['sample_index'] = np.arange(len(pd_data))

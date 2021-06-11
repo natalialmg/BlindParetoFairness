@@ -229,7 +229,7 @@ class BPF_projector():
 
 class BPF_config(argparse.Namespace):
 
-    def __init__(self,n_utility=2,**kwargs):
+    def __init__(self,n_utility=2,config_dic = None,**kwargs):
 
         self.basedir = 'models/'
         self.model_name = 'vanilla_model'
@@ -284,6 +284,10 @@ class BPF_config(argparse.Namespace):
         self.upper = 1
         self.rho = 1
 
+
+        if config_dic is not None:
+            self.set_values(config_dic)
+
         ## Load parameters
         for k in kwargs:
             setattr(self, k, kwargs[k])
@@ -334,6 +338,11 @@ class BPF_config(argparse.Namespace):
             save_path =  self.basedir + self.model_name + '/config.json'
         save_json(config2json, save_path)
         print('Saving config json file in : ', save_path)
+
+    def set_values(self,config_dic):
+        if config_dic is not None:
+            for k in config_dic.keys():
+                setattr(self, k, config_dic[k])
 
 
 class BPF_model():

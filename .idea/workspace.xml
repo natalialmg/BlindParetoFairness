@@ -21,11 +21,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="bash_BPF.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="bash_BPF.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/BPF/bash_BPF.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="19" column="12" selection-start-line="19" selection-start-column="12" selection-end-line="19" selection-end-column="12" />
+            <state relative-caret-position="575">
+              <caret line="119" column="0" selection-start-line="119" selection-start-column="0" selection-end-line="119" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="bash_DRO.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/DRO/bash_DRO.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="330">
+              <caret line="32" column="14" selection-start-line="32" selection-start-column="14" selection-end-line="32" selection-end-column="14" />
               <folding />
             </state>
           </provider>
@@ -34,21 +44,54 @@
       <file leaf-file-name="main_BPF_tabular.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/BPF/main_BPF_tabular.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="470">
-              <caret line="281" column="43" selection-start-line="281" selection-start-column="43" selection-end-line="281" selection-end-column="43" />
+            <state relative-caret-position="195">
+              <caret line="13" column="77" selection-start-line="13" selection-start-column="77" selection-end-line="13" selection-end-column="77" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
-                <element signature="e#14841#14930#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="bash_DRO.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/DRO/bash_DRO.py">
+      <file leaf-file-name="BPF_classes.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/BPF/BPF_classes.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+            <state relative-caret-position="195">
+              <caret line="357" column="38" selection-start-line="357" selection-start-column="38" selection-end-line="357" selection-end-column="38" />
+              <folding>
+                <element signature="e#353#8652#0" expanded="false" />
+                <element signature="e#1327#2015#0" expanded="false" />
+                <element signature="e#2063#2402#0" expanded="false" />
+                <element signature="e#2606#8143#0" expanded="false" />
+                <element signature="e#8697#12282#0" expanded="false" />
+                <element signature="e#14920#15115#0" expanded="false" />
+                <element signature="e#16863#18820#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DRO_trainers.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/DRO/DRO_trainers.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="390">
+              <caret line="280" column="0" selection-start-line="280" selection-start-column="0" selection-end-line="280" selection-end-column="0" />
+              <folding>
+                <element signature="e#360#2507#0" expanded="false" />
+                <element signature="e#2724#6920#0" expanded="false" />
+                <element signature="e#7031#8749#0" expanded="false" />
+                <element signature="e#8818#9226#0" expanded="false" />
+                <element signature="e#9276#9802#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main_DRO_tabular.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/DRO/main_DRO_tabular.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-3060">
+              <caret line="47" column="0" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -74,24 +117,13 @@
       <file leaf-file-name="datasets.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dataloaders/datasets.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="287" column="104" selection-start-line="287" selection-start-column="104" selection-end-line="287" selection-end-column="104" />
+            <state relative-caret-position="465">
+              <caret line="294" column="31" selection-start-line="294" selection-start-column="20" selection-end-line="294" selection-end-column="31" />
               <folding>
                 <element signature="e#466#3874#0" expanded="false" />
                 <element signature="e#4080#7699#0" expanded="false" />
                 <element signature="e#7948#12217#0" expanded="false" />
-                <element signature="e#12429#15221#0" expanded="false" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main_DRO_tabular.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/DRO/main_DRO_tabular.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="257">
-              <caret line="311" column="0" selection-start-line="327" selection-start-column="8" selection-end-line="327" selection-end-column="46" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -123,15 +155,15 @@
         <option value="$PROJECT_DIR$/dataloaders/dataloaders.py" />
         <option value="$PROJECT_DIR$/BPF/BPF_trainers.py" />
         <option value="$PROJECT_DIR$/general/utils.py" />
-        <option value="$PROJECT_DIR$/BPF/BPF_classes.py" />
         <option value="$PROJECT_DIR$/general/networks.py" />
         <option value="$PROJECT_DIR$/general/evaluation.py" />
-        <option value="$PROJECT_DIR$/DRO/DRO_trainers.py" />
+        <option value="$PROJECT_DIR$/dataloaders/datasets.py" />
+        <option value="$PROJECT_DIR$/BPF/main_BPF_tabular.py" />
         <option value="$PROJECT_DIR$/DRO/main_DRO_tabular.py" />
         <option value="$PROJECT_DIR$/DRO/bash_DRO.py" />
-        <option value="$PROJECT_DIR$/BPF/main_BPF_tabular.py" />
         <option value="$PROJECT_DIR$/BPF/bash_BPF.py" />
-        <option value="$PROJECT_DIR$/dataloaders/datasets.py" />
+        <option value="$PROJECT_DIR$/DRO/DRO_trainers.py" />
+        <option value="$PROJECT_DIR$/BPF/BPF_classes.py" />
       </list>
     </option>
   </component>
@@ -142,10 +174,10 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1593" />
-    <option name="y" value="41" />
-    <option name="width" value="1464" />
-    <option name="height" value="1002" />
+    <option name="x" value="1847" />
+    <option name="y" value="23" />
+    <option name="width" value="1353" />
+    <option name="height" value="1018" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -188,6 +220,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="BlindParetoFairness" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BlindParetoFairness" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BlindParetoFairness" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="notebooks" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -482,15 +528,15 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1593" y="41" width="1464" height="1002" extended-state="0" />
+    <frame x="1847" y="23" width="1353" height="1018" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30590716" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3318078" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.05824176" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.05723542" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -526,7 +572,7 @@
           <option name="timeStamp" value="5" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="10" />
+      <option name="time" value="11" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -539,7 +585,6 @@
             <element signature="e#466#3874#0" expanded="false" />
             <element signature="e#4080#7699#0" expanded="false" />
             <element signature="e#7948#12217#0" expanded="false" />
-            <element signature="e#12429#15221#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -609,7 +654,6 @@
           <caret line="27" column="7" selection-start-line="27" selection-start-column="7" selection-end-line="27" selection-end-column="7" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
-            <element signature="e#14841#14930#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -700,7 +744,6 @@
           <caret line="27" column="7" selection-start-line="27" selection-start-column="7" selection-end-line="27" selection-end-column="7" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
-            <element signature="e#14841#14930#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -791,7 +834,6 @@
           <caret line="27" column="7" selection-start-line="27" selection-start-column="7" selection-end-line="27" selection-end-column="7" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
-            <element signature="e#14841#14930#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -890,16 +932,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DRO/DRO_trainers.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1335">
-          <caret line="157" column="75" selection-start-line="157" selection-start-column="75" selection-end-line="157" selection-end-column="75" />
-          <folding>
-            <element signature="e#360#2507#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/general/utils.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="161">
@@ -909,23 +941,6 @@
             <element signature="e#560#614#0" expanded="false" />
             <element signature="e#656#725#0" expanded="false" />
             <element signature="e#840#2308#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BPF/BPF_classes.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="229" column="37" selection-start-line="229" selection-start-column="37" selection-end-line="229" selection-end-column="37" />
-          <folding>
-            <element signature="e#0#15#0" expanded="false" />
-            <element signature="e#353#8652#0" expanded="false" />
-            <element signature="e#1327#2015#0" expanded="false" />
-            <element signature="e#2063#2402#0" expanded="false" />
-            <element signature="e#2606#8143#0" expanded="false" />
-            <element signature="e#8697#12026#0" expanded="false" />
-            <element signature="e#14664#14859#0" expanded="false" />
-            <element signature="e#16607#18564#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -945,50 +960,78 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DRO/main_DRO_tabular.py">
+    <entry file="file://$PROJECT_DIR$/dataloaders/datasets.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="257">
-          <caret line="311" column="0" selection-start-line="327" selection-start-column="8" selection-end-line="327" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BPF/main_BPF_tabular.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="470">
-          <caret line="281" column="43" selection-start-line="281" selection-start-column="43" selection-end-line="281" selection-end-column="43" />
+        <state relative-caret-position="465">
+          <caret line="294" column="31" selection-start-line="294" selection-start-column="20" selection-end-line="294" selection-end-column="31" />
           <folding>
-            <element signature="e#0#10#0" expanded="true" />
-            <element signature="e#14841#14930#0" expanded="false" />
+            <element signature="e#466#3874#0" expanded="false" />
+            <element signature="e#4080#7699#0" expanded="false" />
+            <element signature="e#7948#12217#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/DRO/bash_DRO.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+        <state relative-caret-position="330">
+          <caret line="32" column="14" selection-start-line="32" selection-start-column="14" selection-end-line="32" selection-end-column="14" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dataloaders/datasets.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="287" column="104" selection-start-line="287" selection-start-column="104" selection-end-line="287" selection-end-column="104" />
-          <folding>
-            <element signature="e#466#3874#0" expanded="false" />
-            <element signature="e#4080#7699#0" expanded="false" />
-            <element signature="e#7948#12217#0" expanded="false" />
-            <element signature="e#12429#15221#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/BPF/bash_BPF.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="12" selection-start-line="19" selection-start-column="12" selection-end-line="19" selection-end-column="12" />
+        <state relative-caret-position="575">
+          <caret line="119" column="0" selection-start-line="119" selection-start-column="0" selection-end-line="119" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BPF/main_BPF_tabular.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="77" selection-start-line="13" selection-start-column="77" selection-end-line="13" selection-end-column="77" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BPF/BPF_classes.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="357" column="38" selection-start-line="357" selection-start-column="38" selection-end-line="357" selection-end-column="38" />
+          <folding>
+            <element signature="e#353#8652#0" expanded="false" />
+            <element signature="e#1327#2015#0" expanded="false" />
+            <element signature="e#2063#2402#0" expanded="false" />
+            <element signature="e#2606#8143#0" expanded="false" />
+            <element signature="e#8697#12282#0" expanded="false" />
+            <element signature="e#14920#15115#0" expanded="false" />
+            <element signature="e#16863#18820#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DRO/DRO_trainers.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="280" column="0" selection-start-line="280" selection-start-column="0" selection-end-line="280" selection-end-column="0" />
+          <folding>
+            <element signature="e#360#2507#0" expanded="false" />
+            <element signature="e#2724#6920#0" expanded="false" />
+            <element signature="e#7031#8749#0" expanded="false" />
+            <element signature="e#8818#9226#0" expanded="false" />
+            <element signature="e#9276#9802#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DRO/main_DRO_tabular.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3060">
+          <caret line="47" column="0" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
           <folding />
         </state>
       </provider>
